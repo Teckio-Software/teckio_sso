@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aRJO6lF3KYTP8zRkHWcZ82vBLvTPeNqnfkpfZdxqbzM=",
+  "Source": "SSO",
+  "BasePath": "_content/SSO",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

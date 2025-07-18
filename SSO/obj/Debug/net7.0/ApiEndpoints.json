@@ -1,0 +1,2873 @@
+[
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "EditarArchivo",
+    "RelativePath": "api/ArchivosEmpresa/EditarParametroTimbrado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParametrosTimbradoDTO",
+        "Type": "SSO.DTO.ParametrosTimbradoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "EliminarArchivo",
+    "RelativePath": "api/ArchivosEmpresa/EliminarParametroTimbrado/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "GuardarCertkey",
+    "RelativePath": "api/ArchivosEmpresa/GuardarParametroTimbrado/{idempresa}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "certificado",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "key",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idempresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "ObtenerParametroDefault",
+    "RelativePath": "api/ArchivosEmpresa/ObtenerParametroDefault/{idempresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idempresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.ParametrosTimbradoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "ObtenerTodosEmpresa",
+    "RelativePath": "api/ArchivosEmpresa/ObtenerParametrosTimbradoEmpresa/{idempresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idempresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SSO.DTO.ParametrosTimbradoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.ArchivosTimbradoEmpresaController",
+    "Method": "ObtenerXId",
+    "RelativePath": "api/ArchivosEmpresa/ObtenerParametroTimbrado/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.ParametrosTimbradoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AutoFactClientesController.AutoFactClientesController",
+    "Method": "ObtenerEmpresaxRFC",
+    "RelativePath": "api/AutoFact/Empresa/obtenerEmpresaxRFC/{RFC}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RFC",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.EmpresaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CorporativoController",
+    "Method": "Editar",
+    "RelativePath": "api/Corporativo/Editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Corporativo",
+        "Type": "SistemaERP.DTO.SSO.CorporativoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CorporativoController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Corporativo/Eliminar/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CorporativoController",
+    "Method": "Guardar",
+    "RelativePath": "api/Corporativo/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Corporativo",
+        "Type": "SistemaERP.DTO.SSO.CorporativoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CorporativoController",
+    "Method": "Lista",
+    "RelativePath": "api/Corporativo/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.CorporativoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CorporativoController",
+    "Method": "ObtenCoporporativoXId",
+    "RelativePath": "api/Corporativo/ObtenCorporativo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.CorporativoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CuentaController",
+    "Method": "ActualizarClaims",
+    "RelativePath": "api/cuenta/actualizarClaims",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.RespuestaAutenticacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CuentaController",
+    "Method": "zfLogin",
+    "RelativePath": "api/cuenta/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zCredenciales",
+        "Type": "SistemaERP.DTO.CredencialesUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.RespuestaAutenticacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.CuentaController",
+    "Method": "RespuestaFront",
+    "RelativePath": "api/cuenta/RespuestaFront",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "Editar",
+    "RelativePath": "api/empresa/Editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Empresa",
+        "Type": "SistemaERP.DTO.SSO.EmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "Guardar",
+    "RelativePath": "api/empresa/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Empresa",
+        "Type": "SistemaERP.DTO.SSO.EmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "Lista",
+    "RelativePath": "api/empresa/ObtenEmpresasPorCorporativo/{IdCorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.EmpresaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "Empresa",
+    "RelativePath": "api/empresa/ObtenEmpresasxid/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.EmpresaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "EmpresaxIdCorp",
+    "RelativePath": "api/empresa/ObtenEmpresasxIdCorporativo/{idcorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idcorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.EmpresaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.EmpresaController",
+    "Method": "Empresa",
+    "RelativePath": "api/empresa/ObtenEmpresasxSociedad/{sociedad}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sociedad",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.EmpresaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GuardarController.GuardarController",
+    "Method": "Archivo",
+    "RelativePath": "api/Guardar/Archivo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "files",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RFC",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GuardarController.GuardarController",
+    "Method": "EditarArchivo",
+    "RelativePath": "api/Guardar/EditarArchivo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "GuardarArchivos.DTO.Archivo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GuardarController.GuardarController",
+    "Method": "ObtenerArchivo",
+    "RelativePath": "api/Guardar/obtenerArchivo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GuardarArchivos.DTO.Archivo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GuardarController.GuardarController",
+    "Method": "obtenerArchivoxUUID",
+    "RelativePath": "api/Guardar/obtenerArchivoxUUID/{UUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UUID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GuardarArchivos.DTO.Archivo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.ManualController",
+    "Method": "DescargaFacturaPdf",
+    "RelativePath": "api/manual/descargaManual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.ManualController",
+    "Method": "descargaPlantilla",
+    "RelativePath": "api/manual/descargaPlantilla",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.MenuXEmpresaController",
+    "Method": "ActivaMenuAEmpresa",
+    "RelativePath": "api/menusXEmpresa/activaMenuAEmpresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.MenuEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.MenuXEmpresaController",
+    "Method": "DesactivaMenuAEmpresa",
+    "RelativePath": "api/menusXEmpresa/desactivaMenuAEmpresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.MenuEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.MenuXEmpresaController",
+    "Method": "ObtenMenusActivosCompletoEstructuraXIdEmpresa",
+    "RelativePath": "api/menusXEmpresa/menusActivosEstructura/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.MenuEstructuraDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaController",
+    "Method": "Editar",
+    "RelativePath": "api/parametrosempresa/Editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParametrosEmpresa",
+        "Type": "SistemaERP.DTO.ParametrosEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaController",
+    "Method": "Guardar",
+    "RelativePath": "api/parametrosempresa/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParametrosEmpresa",
+        "Type": "SistemaERP.DTO.ParametrosEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaController",
+    "Method": "Lista",
+    "RelativePath": "api/parametrosempresa/Lista/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaGastosController",
+    "Method": "Editar",
+    "RelativePath": "api/ParametrosEmpresaGastos/Editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParametrosEmpresa",
+        "Type": "SistemaERP.DTO.SSO.ParametrosEmpresaGastosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.ParametrosEmpresaGastosDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaGastosController",
+    "Method": "Guardar",
+    "RelativePath": "api/ParametrosEmpresaGastos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ParametrosEmpresa",
+        "Type": "SistemaERP.DTO.SSO.ParametrosEmpresaGastosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.ParametrosEmpresaGastosDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.ParametrosEmpresaGastosController",
+    "Method": "ObtenerTodosxEmpresa",
+    "RelativePath": "api/ParametrosEmpresaGastos/ObtenerTodosParametrosxEmpresa/{idEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "autorizaActividadARol",
+    "RelativePath": "api/rol/autorizaActividadARol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolActividadDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "autorizaSeccionARol",
+    "RelativePath": "api/rol/autorizaSeccionARol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolSeccionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "crearRol",
+    "RelativePath": "api/rol/CrearRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolCreacionUnaEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "editarNombreRol",
+    "RelativePath": "api/rol/editarNombreRol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolCambiaNombre",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "ObtenMenusXRol",
+    "RelativePath": "api/rol/ObtenMenusXIdEmpresa/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.Menu.CatalogoMenuDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "obtenRolesXEmpresa",
+    "RelativePath": "api/rol/obtenRolesXEmpresa/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.RolDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "quitarPermisoActividadARol",
+    "RelativePath": "api/rol/quitarPermisoActividadARol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolMenuEstructuraDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "quitarPermisoSeccionARol",
+    "RelativePath": "api/rol/quitarPermisoSeccionARol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolMenuEstructuraDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "rolActividadEstructura",
+    "RelativePath": "api/rol/rolActividadEstructura/{IdRol}/{IdSeccion}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IdSeccion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.RolMenuEstructuraDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolController",
+    "Method": "rolSeccionEstructura",
+    "RelativePath": "api/rol/rolSeccionEstructura/{IdRol}/{IdMenu}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.RolMenuEstructuraDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolCorporativoController",
+    "Method": "BuscaIdRolXOtroIdRol",
+    "RelativePath": "api/rolPorCoporativo/BuscaIdRolXOtroIdRol/{idEmpresa}/{idRol}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.RolDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolCorporativoController",
+    "Method": "CrearRolVariasEmpresas",
+    "RelativePath": "api/rolPorCoporativo/CrearRolVariasEmpresas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.RolCreacionVarisEmpresasMismoCorporativoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolCorporativoController",
+    "Method": "ObtenEmpresasQueTienenRolesActivos",
+    "RelativePath": "api/rolPorCoporativo/ObtenEmpresasQueTienenRolesActivos/{idCorporativo}/{idRol}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idRol",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.RolesActivosEnEmpresaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.RolCorporativoController",
+    "Method": "ObtenRolesXCorporativo",
+    "RelativePath": "api/rolPorCoporativo/ObtenRolesXCorporativo/{idCorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.RolDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.RpEmpresaController",
+    "Method": "ObtenerRPIdEmpresa",
+    "RelativePath": "api/RpEmpresa/ObtenerRPIdEmpresa/{idEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.ErpCorporativoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SSO.Controllers.RpEmpresaController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/RpEmpresa/ObtenerTodosErp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SSO.DTO.ErpDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.ServicioController",
+    "Method": "obtenMenus",
+    "RelativePath": "api/servicios/ObtenMenus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.Menu.CatalogoMenuDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.ServiciosController",
+    "Method": "ObtenEstructuraSerivicios",
+    "RelativePath": "api/servicios/serviciosEstructura",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.Menu.CatalogoSeccionConMenuDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ActivaUsuario",
+    "RelativePath": "api/usuario/activaUsuario/{IdUsuario}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "actualizaInfoUsuario",
+    "RelativePath": "api/usuario/actualizaInfoUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "AsignarRolUsuarioProyectoEmpresa",
+    "RelativePath": "api/usuario/AsignarRolesPorProyecto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "SistemaERP.DTO.Menu.AsignarRolAUsuarioEnEmpresaPorPoryectoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "zfCambiarContraseniaUsuario",
+    "RelativePath": "api/usuario/cambiarContraseniaUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zCredenciales",
+        "Type": "SistemaERP.DTO.CredencialesUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.RespuestaAutenticacionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "AsignarQuitarClaimsAUsuario",
+    "RelativePath": "api/usuario/cambiarPermisosUsuarioXPerfil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.Menu.CambiarRolAUsuarioEnEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "PrimerUsuarioCreacion",
+    "RelativePath": "api/usuario/CrearPrimerUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "creaUsuarioBase",
+    "RelativePath": "api/usuario/creaUsuarioBase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioCreacionBaseDTO2",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "DesactivaUsuario",
+    "RelativePath": "api/usuario/desactivaUsuario/{IdUsuario}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "obtenDatosUsuario",
+    "RelativePath": "api/usuario/obtenDatosUsuario/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "obtenXIdUsuarioXIdProyectoXIdEmpresa",
+    "RelativePath": "api/usuario/obtenerRelacionesRolProyectoUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "SistemaERP.DTO.Menu.AsignarRolAUsuarioEnEmpresaPorPoryectoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SSO.DTO.RolProyectoEmpresaUsuarioDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ObtenerUsuario",
+    "RelativePath": "api/usuario/ObtenerUsuario/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ObtenerUsuarioxid",
+    "RelativePath": "api/usuario/ObtenerUsuarioXidUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "obtenUsuario",
+    "RelativePath": "api/usuario/obtenTipoUsuario/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/usuario/ObtenTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "zfReestablecerContrasenia",
+    "RelativePath": "api/usuario/reestableceContrasenia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zContrasenias",
+        "Type": "SistemaERP.DTO.ReestablecerContraseniaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "UsuarioPerteneceClienteXIdUsuario",
+    "RelativePath": "api/usuario/UsuarioPerteneceClienteXIdUsuario/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioPertenecienteAClienteDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ObtenUsuariosCompletoXIdEmpresa",
+    "RelativePath": "api/usuario/usuariosEstructuraPorRolXEmpresa/{IdCorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioEstructuraCorporativoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ObtenUsuariosMenuCompletoXIdEmpresa",
+    "RelativePath": "api/usuario/usuariosEstructuraXEmpresa/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioRolMenuEstructuraDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ValidarUsuario",
+    "RelativePath": "api/usuario/ValidarUsuario/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ValidarUsuarioEmpresa",
+    "RelativePath": "api/usuario/ValidarUsuarioEmpresa/{username}/{idEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ValidarUsuarioGastos",
+    "RelativePath": "api/usuario/ValidarUsuarioGastos/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "ValidarUsuarioXEmpresa",
+    "RelativePath": "api/usuario/ValidarUsuarioXEmpresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zCredenciales",
+        "Type": "SistemaERP.DTO.CredencialesUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioAutoFacController",
+    "Method": "ActualizaUsuarioAutoFacs",
+    "RelativePath": "api/usuarioAutoFac/ActualizaUsuarioAutoFac",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioAutoFacConsultaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioAutoFacController",
+    "Method": "CrearRelacionEmpresas",
+    "RelativePath": "api/usuarioAutoFac/creaRelacionUsuarioEmpresaAutoFac",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioAutoFacEnVariasEmpresasCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioAutoFacController",
+    "Method": "ObtenerUsuarioAutoFacxId",
+    "RelativePath": "api/usuarioAutoFac/ObtenerUsuarioAutoFacxidUsuario/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioAutoFacDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioAutoFacController",
+    "Method": "ObtenInfoUsuarioAutoFac",
+    "RelativePath": "api/usuarioAutoFac/ObtenInfoUsuarioAutoFac/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioAutoFacConsultaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioCorporativoController",
+    "Method": "obtenerCorporativosPertenecientes",
+    "RelativePath": "api/usuarioCorporativo/corporativosPertenecientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.CorporativoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioCorporativoController",
+    "Method": "CreaUsuarioCorporativo",
+    "RelativePath": "api/usuarioCorporativo/CreaUsuarioCorporativo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioCorporativoCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioCorporativoController",
+    "Method": "EditaUsuarioCorporativo",
+    "RelativePath": "api/usuarioCorporativo/EditaUsuarioCorporativo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioCorporativoEdicionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioCorporativoController",
+    "Method": "ObtenXIdUsuario",
+    "RelativePath": "api/usuarioCorporativo/ObtenXIdUsuario/{idusuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idusuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioCorporativoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioCorporativoController",
+    "Method": "obtenerCorporativosPertenecientes",
+    "RelativePath": "api/usuarioCorporativo/usuariosXCorporativo/{idCorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "activarEmpresaEnUsuario",
+    "RelativePath": "api/usuarioempresas/activarEmpresaEnUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "desactivarEmpresaEnUsuario",
+    "RelativePath": "api/usuarioempresas/desactivarEmpresaEnUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "obtenerEmpresasPertenecientes",
+    "RelativePath": "api/usuarioempresas/empresasPertenecientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.EmpresaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "obtenerEmpresasDeCorporativoEnClientes",
+    "RelativePath": "api/usuarioempresas/empresasXUsuario/{IdCorporativo}/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioEmpresaEstructura, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "ObtenXIdUsuarioXIdEmpresa",
+    "RelativePath": "api/usuarioempresas/ObtenXIdUsuarioXIdEmpresa/{idusuario}/{idempresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idusuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idempresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioEmpresaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioEmpresaController",
+    "Method": "ObtenUsuariosDeCliente",
+    "RelativePath": "api/usuarioempresas/usuarioXEmpresa/{IdCorporativo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCorporativo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioEstructuraCorporativoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioFormaPagoPermitidaEmpresaController",
+    "Method": "CreaRelacionUsuarioEmpresaFormaPago",
+    "RelativePath": "api/UsuarioFormaPagoPermitidaEmpresa/CreaRelacionUsuarioEmpresaFormaPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.SSO.UsuarioFormasPagoXEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioFormaPagoPermitidaEmpresaController",
+    "Method": "ObtenRelacionUsuarioEmpresaFormaPago",
+    "RelativePath": "api/UsuarioFormaPagoPermitidaEmpresa/ObtenRelacionUsuarioEmpresaFormaPago/{IdUsuario}/{IdEmpresa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "IdEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.UsuarioFormasPagoXEmpresaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioGastosController",
+    "Method": "ActualizaUsuarioGastos",
+    "RelativePath": "api/usuarioGastos/ActualizaUsuarioGastos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioGastosConsultaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioGastosController",
+    "Method": "CrearRelacionEmpresas",
+    "RelativePath": "api/usuarioGastos/creaRelacionUsuarioEmpresaGastos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.UsuarioGastosEnVariasEmpresasCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioGastosController",
+    "Method": "ObtenerUsuarioGastosxId",
+    "RelativePath": "api/usuarioGastos/ObtenerUsuarioGastosxidUsuario/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioGastosDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioGastosController",
+    "Method": "ObtenInfoUsuarioGastos",
+    "RelativePath": "api/usuarioGastos/ObtenInfoUsuarioGastos/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioGastosConsultaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioGastosController",
+    "Method": "ObtenUsuarioGastosId",
+    "RelativePath": "api/usuarioGastos/ObtenUsuarioGastosxId/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuarioGastosDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ActualizaUsuarioProveedor",
+    "RelativePath": "api/usuarioProveedor/ActualizaUsuarioProveedor",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.SSO.UsuarioProveedorConsultaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "CreaRelacionUsuarioEmpresaProveedor",
+    "RelativePath": "api/usuarioProveedor/creaRelacionUsuarioProveedor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.SSO.UsuarioProveedorCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ObtenInfoUsuarioProveedor",
+    "RelativePath": "api/usuarioProveedor/ObtenInfoUsuarioProveedor/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.UsuarioProveedorConsultaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ObtenTodos",
+    "RelativePath": "api/usuarioProveedor/ObtenTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.UsuarioProveedorDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ObtenXIdUsuario",
+    "RelativePath": "api/usuarioProveedor/ObtenXIdUsuario/{idusuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idusuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.UsuarioProveedorDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ObtenerXRFC",
+    "RelativePath": "api/usuarioProveedor/ObtenXRfc/{rfc}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rfc",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.SSO.UsuarioProveedorDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProveedorController",
+    "Method": "ObtenUsuariosProveedores",
+    "RelativePath": "api/usuarioProveedor/UsuariosProveedores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.SSO.UsuarioProveedorConsultaDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProyectoController",
+    "Method": "asignarPermisosProyectoAnterior",
+    "RelativePath": "api/UsuarioProyecto/asignarPermisosProyecto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametros",
+        "Type": "SistemaERP.DTO.UsuarioProyectoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProyectoController",
+    "Method": "asignacionProyectoAUsuario",
+    "RelativePath": "api/UsuarioProyecto/asignarProyectoUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "SistemaERP.DTO.UsuarioProyectoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProyectoController",
+    "Method": "asignarRolDefault",
+    "RelativePath": "api/UsuarioProyecto/asignarRolDefault",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametros",
+        "Type": "SistemaERP.DTO.UsuarioProyectoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioProyectoController",
+    "Method": "obtenerProyectosXIdUsuario",
+    "RelativePath": "api/UsuarioProyecto/obtenerProyectosUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametros",
+        "Type": "SistemaERP.DTO.UsuarioProyectoParametrosBusquedaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuarioProyectoDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioSeccionController",
+    "Method": "asignarPermisoActividadAUsuario",
+    "RelativePath": "api/UsuarioSeccion/asignarPermisoActividadAUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.Menu.CambiaPermisoActividad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioSeccionController",
+    "Method": "asignarPermisoSeccionAUsuario",
+    "RelativePath": "api/UsuarioSeccion/asignarPermisoSeccionAUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.Menu.CambiaPermisoSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioSeccionController",
+    "Method": "quitarPermisoActividadAUsuario",
+    "RelativePath": "api/UsuarioSeccion/quitarPermisoActividadAUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.Menu.CambiaPermisoActividad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioSeccionController",
+    "Method": "quitarPermisoSeccionAUsuario",
+    "RelativePath": "api/UsuarioSeccion/quitarPermisoSeccionAUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametro",
+        "Type": "SistemaERP.DTO.Menu.CambiaPermisoSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuariosUltimaSeccionController",
+    "Method": "CrearYObtener",
+    "RelativePath": "api/UsuarioUltimaSeccion/crearUsuarioUltimaSeccion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modelo",
+        "Type": "SistemaERP.DTO.UsuariosUltimaSeccionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuariosUltimaSeccionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuariosUltimaSeccionController",
+    "Method": "EditarUsuarioUltimaSeccion",
+    "RelativePath": "api/UsuarioUltimaSeccion/editarUsuarioUltimaSeccion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modelo",
+        "Type": "SistemaERP.DTO.UsuariosUltimaSeccionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuariosUltimaSeccionController",
+    "Method": "ObtenerUsuarioUltimaSeccion",
+    "RelativePath": "api/UsuarioUltimaSeccion/obtenerUsuariosUltimaSeccion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaERP.DTO.UsuariosUltimaSeccionDTO, SSO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuariosUltimaSeccionController",
+    "Method": "ObtenerXIdUsuarioUltimaSeccion",
+    "RelativePath": "api/UsuarioUltimaSeccion/obtenerXIdUsuarioUltimaSeccion/{idUsuarioUltimaS}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuarioUltimaS",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuariosUltimaSeccionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuariosUltimaSeccionController",
+    "Method": "ObtenerXIdUsuarioTablaUsuario",
+    "RelativePath": "api/UsuarioUltimaSeccion/obtenrXIdUsuario/{IdUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SistemaERP.DTO.UsuariosUltimaSeccionDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
