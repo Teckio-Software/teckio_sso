@@ -110,7 +110,7 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdUsuario"></param>
         /// <returns></returns>
         [HttpGet("obtenTipoUsuario/{IdUsuario:int}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "VisorPermiso")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
         public async Task<ActionResult<RespuestaDTO>> obtenUsuario(int IdUsuario)
         {
             RespuestaDTO respuestaDTO = new RespuestaDTO();
@@ -137,7 +137,7 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdUsuario"></param>
         /// <returns></returns>
         [HttpGet("obtenDatosUsuario/{IdUsuario:int}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "VisorPermiso")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
         public async Task<ActionResult<UsuarioDTO>> obtenDatosUsuario(int IdUsuario)
         {
             var usuario = await _UsuarioService.ObtenXIdUsuario(IdUsuario);
@@ -314,7 +314,7 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="zCredenciales">Un objeto del tipo <see cref="CredencialesUsuarioDTO"/></param>
         /// <returns></returns>
         [HttpPost("cambiarContraseniaUsuario")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "VisorPermiso")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
         public async Task<ActionResult<RespuestaAutenticacionDTO>> zfCambiarContraseniaUsuario([FromBody] CredencialesUsuarioDTO zCredenciales)
         {
             var zvUsuario = await zvUserManager.FindByEmailAsync(zCredenciales.Email);
@@ -334,7 +334,7 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro">Un objeto del tipo <see cref="CambiarRolAUsuarioEnEmpresaDTO"/></param>
         /// <returns>Un objeto de <seealso cref="NoContentResult"/></returns>
         [HttpPost("cambiarPermisosUsuarioXPerfil")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "VisorPermiso")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
         public async Task<ActionResult<RespuestaDTO>> AsignarQuitarClaimsAUsuario([FromBody] CambiarRolAUsuarioEnEmpresaDTO parametro)
         {
             var authen = HttpContext.User;

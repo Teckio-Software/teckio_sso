@@ -2760,8 +2760,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador",
-              "VisorPermiso"
+              "Administrador"
             ]
           }
         ]
@@ -2815,8 +2814,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador",
-              "VisorPermiso"
+              "Administrador"
             ]
           }
         ]
@@ -3168,8 +3166,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador",
-              "VisorPermiso"
+              "Administrador"
             ]
           }
         ]
@@ -3230,8 +3227,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador",
-              "VisorPermiso"
+              "Administrador"
             ]
           }
         ]
