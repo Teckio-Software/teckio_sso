@@ -119,6 +119,11 @@ namespace SistemaERP.API.Controllers.SSO
             {
                 zvClaims.Add(claimAdministrador);
             }
+            var claimAdministradorRoles = claims.FirstOrDefault(z => z.Value == "AdministradorRoles");
+            if (claimAdministradorRoles != null)
+            {
+                zvClaims.Add(claimAdministradorRoles);
+            }
             var rolesActivos = new List<RolProyectoEmpresaUsuarioDTO>();
             var UsuarioUltimaSecion = await _UsuariosUltimaSeccion.ObtenerXIdUsuario(usuario.Id);
             if (UsuarioUltimaSecion.Id <= 0) {
