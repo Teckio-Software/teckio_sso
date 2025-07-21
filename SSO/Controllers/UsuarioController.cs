@@ -896,6 +896,29 @@ namespace SistemaERP.API.Controllers.SSO
             }
         }
 
+        [HttpPost("CrearAdministradorRoles")]
+        public async Task CrearAdministradorRoles()
+        {
+            string adminRole = "AdministradorRoles";
+            if (!await zvRoleManager.RoleExistsAsync(adminRole))
+            {
+                await zvRoleManager.CreateAsync(new IdentityRole(adminRole));
+            }
+
+            string adminEmail = "ivazquez@rfacil.com";
+
+            var adminUser = await zvUserManager.FindByEmailAsync(adminEmail);
+            if (adminUser != null)
+            {
+                await zvUserManager.AddToRoleAsync(adminUser, adminRole);
+            }
+            else
+            {
+                // Maneja errores aquí si es necesario
+                throw new Exception("No se encontro el usuario");
+            }
+        }
+
         [HttpPost("AsignarRolesPorProyecto")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
         public async Task<ActionResult<RespuestaDTO>> AsignarRolUsuarioProyectoEmpresa([FromBody] AsignarRolAUsuarioEnEmpresaPorPoryectoDTO registro)
