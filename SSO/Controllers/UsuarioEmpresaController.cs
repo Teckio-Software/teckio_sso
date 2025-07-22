@@ -207,10 +207,14 @@ namespace SistemaERP.API.Controllers.SSO
         /// <returns></returns>
         [HttpGet("usuarioXEmpresa/{IdCorporativo:int}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(Policy = "AdministradorYAdminRoles")]
         public async Task<List<UsuarioEstructuraCorporativoDTO>> ObtenUsuariosDeCliente(int IdCorporativo)
         {
             var authen = HttpContext.User;
-            var zvUsernameClaim = authen.Claims.Where(z => z.Type == "username").FirstOrDefault()!.Value;
+            //Al construir el token el primer claim que se le pasa es el nombre de usuario (username).
+            var zvUsernameClaim = authen.Claims.FirstOrDefault()!.Value;
+            var usernameClaim = HttpContext.User.Claims.Where(z => z.Type == "username").ToList();
+            var esActivoClaim = HttpContext.User.Claims.Where(z => z.Type == "activo").ToList();
             List<UsuarioEstructuraCorporativoDTO> usuariosFinal = new List<UsuarioEstructuraCorporativoDTO>();
             var usuariosCorporativos = await _UsuarioCorporativoService.ObtenXIdCorporativo(IdCorporativo);
             var secciones = await _CatalogoSeccionService.ObtenTodos();
@@ -224,6 +228,30 @@ namespace SistemaERP.API.Controllers.SSO
             var usuariosProveedores = await _UsuarioProveedorService.ObtenTodos();
             var usuariosGastos = await _UsuarioGastosService.ObtenTodos();
             var usuariosAutoFac = await _UsuarioAutoFacService.ObtenTodos();
+
+            var esAdminRoles = HttpContext.User.IsInRole("AdministradorRoles");
+            if (esAdminRoles) {
+                var usuario = await _UsuarioService.ObtenXUsername(usernameClaim[0].Value);
+                var usuariosAsignados = new List<UsuarioEmpresaDTO>();
+                foreach (var userEmpresa in usuariosEmpresas) {
+                    if (userEmpresa.IdUsuario == usuario.Id && userEmpresa.Activo) {
+                        var usuariosEncontrados = usuariosEmpresas.Where(z => z.IdEmpresa == userEmpresa.IdEmpresa && z.Activo == true);
+                        usuariosAsignados.AddRange(usuariosEncontrados);
+                    }
+                }
+
+                var nuevosUsuariosClientes = new List<UsuarioPertenecienteAClienteDTO>();
+
+                foreach (var asignados in usuariosAsignados) {
+                    var existeUsuario = usuariosCliente.FirstOrDefault(z => z.IdUsuario == asignados.IdUsuario);
+                    var existeUsuarioClientes = nuevosUsuariosClientes.FirstOrDefault(z => z.IdUsuario == asignados.IdUsuario);
+                    if (existeUsuarioClientes == null) {
+                        nuevosUsuariosClientes.Add(existeUsuario);
+                    }
+                }
+
+                usuariosCliente = nuevosUsuariosClientes;
+            }
             foreach (var usuarioCliente in usuariosCliente)
             {
                 var esCorporativo = usuariosCorporativos.Where(z => z.IdUsuario == usuarioCliente.IdUsuario).ToList();
@@ -287,16 +315,40 @@ namespace SistemaERP.API.Controllers.SSO
         /// <returns></returns>
         [HttpGet("empresasXUsuario/{IdCorporativo:int}/{IdUsuario:int}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(Policy = "AdministradorYAdminRoles")]
+
         public async Task<List<UsuarioEmpresaEstructura>> obtenerEmpresasDeCorporativoEnClientes(int IdCorporativo, int IdUsuario)
         {
             var authen = HttpContext.User;
+            //Al construir el token el primer claim que se le pasa es el nombre de usuario (username).
             var zvUsernameClaim = authen.Claims.FirstOrDefault()!.Value;
+            var usernameClaim = HttpContext.User.Claims.Where(z => z.Type == "username").ToList();
+            var esActivoClaim = HttpContext.User.Claims.Where(z => z.Type == "activo").ToList();
             List<UsuarioEmpresaEstructura> empresasFinal = new List<UsuarioEmpresaEstructura>();
             var empresasPorCorporativo = await _empresaServicio.ObtenXIdCorporativo(IdCorporativo);
             var usuario = await _UsuarioService.ObtenXIdUsuario(IdUsuario);
             var usuarioGastos = await _UsuarioGastosService.ObtenXIdUsuario(usuario.Id);
             var usuarioEmpresa = await _UsuarioEmpresaService.ObtenXIdUsuario(IdUsuario);
-            
+
+            var esAdminRoles = HttpContext.User.IsInRole("AdministradorRoles");
+            if (esAdminRoles)
+            {
+                var usuarioAdminRoles = await _UsuarioService.ObtenXUsername(usernameClaim[0].Value);
+                var usuariosEmpresas = await _UsuarioEmpresaService.ObtenTodos();
+                var empresasAdminRoles = new List<EmpresaDTO>();
+                foreach (var userEmpresa in usuariosEmpresas)
+                {
+                    if (userEmpresa.IdUsuario == usuarioAdminRoles.Id && userEmpresa.Activo)
+                    {
+                        var existeEmpresa = empresasPorCorporativo.FirstOrDefault(z => z.Id == userEmpresa.IdEmpresa);
+                        empresasAdminRoles.Add(existeEmpresa);
+                    }
+                }
+
+                empresasPorCorporativo = empresasAdminRoles;
+
+            }
+
             var rolesEmpresa = await _RolEmpresaService.ObtenTodos();
             var roles = await _RolService.ObtenTodos();
             foreach (var empresa in empresasPorCorporativo)

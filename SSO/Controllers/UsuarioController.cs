@@ -30,7 +30,7 @@ namespace SistemaERP.API.Controllers.SSO
     /// </summary>
     [Route("api/usuario")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioSeccionService _UsuarioMenuSeccionService;
@@ -151,6 +151,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="zContrasenias">Un objeto del tipo <see cref="ReestablecerContraseniaDTO"/></param>
         /// <returns>Un objeto del tipo <see cref="RespuestaAutenticacionDTO"/></returns>
         [HttpPost("actualizaInfoUsuario")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> actualizaInfoUsuario([FromBody] UsuarioDTO parametro)
         {
             RespuestaDTO respuesta = new RespuestaDTO();
@@ -194,6 +196,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("creaUsuarioBase")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> creaUsuarioBase([FromBody] UsuarioCreacionBaseDTO2 parametro)
         {
             var user = HttpContext.User;
@@ -232,6 +236,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdUsuario"></param>
         /// <returns></returns>
         [HttpPost("activaUsuario/{IdUsuario:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> ActivaUsuario(int IdUsuario)
         {
             var user = HttpContext.User;
@@ -243,6 +249,8 @@ namespace SistemaERP.API.Controllers.SSO
             return respuesta;
         }
         [HttpPost("desactivaUsuario/{IdUsuario:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> DesactivaUsuario(int IdUsuario)
         {
             var user = HttpContext.User;
@@ -261,6 +269,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="zContrasenias">Un objeto del tipo <see cref="ReestablecerContraseniaDTO"/></param>
         /// <returns>Un objeto del tipo <see cref="RespuestaAutenticacionDTO"/></returns>
         [HttpPost("reestableceContrasenia")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> zfReestablecerContrasenia([FromBody] ReestablecerContraseniaDTO zContrasenias)
         {
             var user = HttpContext.User;
@@ -450,6 +460,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdCorporativo"></param>
         /// <returns></returns>
         [HttpGet("usuariosEstructuraPorRolXEmpresa/{IdCorporativo:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<List<UsuarioEstructuraCorporativoDTO>>> ObtenUsuariosCompletoXIdEmpresa(int IdCorporativo)
         {
             List<UsuarioEstructuraCorporativoDTO> usuarioEstructura = new List<UsuarioEstructuraCorporativoDTO>();
@@ -486,6 +498,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdEmpresa">Identificador de la empresa</param>
         /// <returns></returns>
         [HttpGet("usuariosEstructuraXEmpresa/{IdEmpresa:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<List<UsuarioRolMenuEstructuraDTO>>> ObtenUsuariosMenuCompletoXIdEmpresa(int IdEmpresa)
         {
             List<UsuarioRolMenuEstructuraDTO> UsuarioEstructuraDTOs = new List<UsuarioRolMenuEstructuraDTO>();
@@ -861,6 +875,8 @@ namespace SistemaERP.API.Controllers.SSO
         #region RolesTeckio
 
         [HttpPost("CrearPrimerUsuario")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task PrimerUsuarioCreacion()
         {
             string adminRole = "Administrador";
@@ -897,30 +913,62 @@ namespace SistemaERP.API.Controllers.SSO
         }
 
         [HttpPost("CrearAdministradorRoles")]
-        public async Task CrearAdministradorRoles()
+        [Authorize(Policy = "Administrador")]
+
+        public async Task<RespuestaDTO> CrearAdministradorRoles(UsuarioEstructuraCorporativoDTO usuario)
         {
+            var respuesta = new RespuestaDTO();
+
             string adminRole = "AdministradorRoles";
             if (!await zvRoleManager.RoleExistsAsync(adminRole))
             {
                 await zvRoleManager.CreateAsync(new IdentityRole(adminRole));
             }
 
-            string adminEmail = "ivazquez@rfacil.com";
 
-            var adminUser = await zvUserManager.FindByEmailAsync(adminEmail);
-            if (adminUser != null)
+            var usuarioEncontrado = await _UsuarioService.ObtenXIdUsuario(usuario.Id);
+            if (usuarioEncontrado.Id <= 0)
             {
-                await zvUserManager.AddToRoleAsync(adminUser, adminRole);
+                respuesta.Estatus = false;
+                respuesta.Descripcion = "No se encontró el usuario";
+                return respuesta;
             }
-            else
+
+            var adminUser = await zvUserManager.FindByEmailAsync(usuarioEncontrado.Correo);
+            if (adminUser == null)
             {
-                // Maneja errores aquí si es necesario
-                throw new Exception("No se encontro el usuario");
+                respuesta.Estatus = false;
+                respuesta.Descripcion = "No se encontró el usuario por correo";
+                return respuesta;
             }
+
+            var claims = await zvUserManager.GetClaimsAsync(adminUser);
+            var existeClaimAdminRole = claims.FirstOrDefault(z => z.Value == "AdministradorRoles");
+            if (existeClaimAdminRole != null) {
+                respuesta.Estatus = false;
+                respuesta.Descripcion = "Este usuario ya es Administrador de Roles";
+                return respuesta;
+            }
+
+
+            var addToRoleResult = await zvUserManager.AddToRoleAsync(adminUser, adminRole);
+            if (!addToRoleResult.Succeeded)
+            {
+                respuesta.Estatus = false;
+                respuesta.Descripcion = "No se pudo asignar el rol al usuario";
+                return respuesta;
+            }
+
+            var newClaim = new Claim("role", "AdministradorRoles");
+            await zvUserManager.AddClaimAsync(adminUser, newClaim);
+
+            respuesta.Estatus = true;
+            respuesta.Descripcion = "Usuario asignado como Administrador de Roles";
+            return respuesta;
         }
 
         [HttpPost("AsignarRolesPorProyecto")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "AdministradorYAdminRoles")]
         public async Task<ActionResult<RespuestaDTO>> AsignarRolUsuarioProyectoEmpresa([FromBody] AsignarRolAUsuarioEnEmpresaPorPoryectoDTO registro)
         {
             var authen = HttpContext.User;
@@ -1076,7 +1124,7 @@ namespace SistemaERP.API.Controllers.SSO
         }
 
         [HttpPost("obtenerRelacionesRolProyectoUsuario")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "AdministradorYAdminRoles")]
         public async Task<List<RolProyectoEmpresaUsuarioDTO>> obtenXIdUsuarioXIdProyectoXIdEmpresa(AsignarRolAUsuarioEnEmpresaPorPoryectoDTO registro)
         {
             var roles = await _RolService.ObtenTodos();

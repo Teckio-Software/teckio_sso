@@ -50,7 +50,7 @@ namespace SistemaERP.API.Controllers.SSO
         public async Task<RespuestaDTO> asignacionProyectoAUsuario(UsuarioProyectoDTO registro)
         {
             var respuesta = new RespuestaDTO();
-            if(registro.Id != 0)
+            if(registro.Id == 0)
             {
                 var asignarProyectoAUsuario = await _UsuarioProyectoService.CrearYObtener(registro);
                 if(asignarProyectoAUsuario.Id != 0)

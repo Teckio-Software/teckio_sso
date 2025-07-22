@@ -50,7 +50,7 @@ namespace SistemaERP.BLL.ServicioSSO
         {
             var objeto = await _Repositorio.Obtener(z => z.Id == registro.Id);
             objeto.Estatus = registro.Estatus;
-            var objetoEditado = await _Repositorio.Editar(_Mapper.Map<UsuarioProyecto>(registro));
+            var objetoEditado = await _Repositorio.Editar(objeto);
             return objetoEditado;
         }
 

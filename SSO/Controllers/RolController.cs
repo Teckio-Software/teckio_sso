@@ -21,7 +21,7 @@ namespace SistemaERP.API.Controllers.SSO
     /// </summary>
     [Route("api/rol")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Administrador")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class RolController : ControllerBase
     {
         private readonly ICatalogoMenuService _CatalogoMenuService;
@@ -90,6 +90,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("CrearRol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> crearRol([FromBody] RolCreacionUnaEmpresaDTO parametro)
         {
             var respuesta = new RespuestaDTO();
@@ -112,6 +114,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("editarNombreRol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<RespuestaDTO>> editarNombreRol([FromBody] RolCambiaNombre parametro)
         {
             RespuestaDTO resp = new RespuestaDTO();
@@ -170,6 +174,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("quitarPermisoSeccionARol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult> quitarPermisoSeccionARol([FromBody] RolMenuEstructuraDTO parametro)
         {
             if (parametro.IdRol <= 0
@@ -251,6 +257,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("quitarPermisoActividadARol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult> quitarPermisoActividadARol([FromBody] RolMenuEstructuraDTO parametro)
         {
             if (parametro.IdRol <= 0 
@@ -336,6 +344,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdEmpresa"></param>
         /// <returns></returns>
         [HttpGet("obtenRolesXEmpresa/{IdEmpresa:int}")]
+        [Authorize(Policy = "AdministradorYAdminRoles")]
+
         public async Task<ActionResult<List<RolDTO>>> obtenRolesXEmpresa(int IdEmpresa)
         {
             List<RolDTO> roles = new List<RolDTO>();
@@ -353,6 +363,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdEmpresa"></param>
         /// <returns></returns>
         [HttpGet("ObtenMenusXIdEmpresa/{IdEmpresa:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<List<CatalogoMenuDTO>>> ObtenMenusXRol(int IdEmpresa)
         {
             List<CatalogoMenuDTO> menusReturn = new List<CatalogoMenuDTO>();
@@ -375,6 +387,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdMenu"></param>
         /// <returns></returns>
         [HttpGet("rolSeccionEstructura/{IdRol:int}/{IdMenu:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<List<RolMenuEstructuraDTO>>> rolSeccionEstructura(int IdRol, int IdMenu)
         {
             List<RolMenuEstructuraDTO> estructura = new List<RolMenuEstructuraDTO>();
@@ -404,6 +418,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="IdSeccion"></param>
         /// <returns></returns>
         [HttpGet("rolActividadEstructura/{IdRol:int}/{IdSeccion:int}")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult<List<RolMenuEstructuraDTO>>> rolActividadEstructura(int IdRol, int IdSeccion)
         {
             List<RolMenuEstructuraDTO> estructura = new List<RolMenuEstructuraDTO>();
@@ -434,6 +450,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("autorizaSeccionARol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult> autorizaSeccionARol([FromBody] RolSeccionDTO parametro)
         {
             await _ProcesoRol.autorizaSeccionARol(parametro);
@@ -445,6 +463,8 @@ namespace SistemaERP.API.Controllers.SSO
         /// <param name="parametro"></param>
         /// <returns></returns>
         [HttpPost("autorizaActividadARol")]
+        [Authorize(Policy = "Administrador")]
+
         public async Task<ActionResult> autorizaActividadARol([FromBody] RolActividadDTO parametro)
         {
             var actividad = await _CatalogoActividadService.ObtenXId(parametro.IdActividad);

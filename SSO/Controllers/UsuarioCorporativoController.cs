@@ -28,6 +28,8 @@ namespace SistemaERP.API.Controllers.SSO
         private readonly ProcesoUsuarioCreacion _UsuarioCreacionProceso;
         private readonly ICorporativoService _CorporativoService;
         private readonly IErpService _ErpService;
+        private readonly IUsuarioEmpresaService _usuarioEmpresaService;
+        private readonly IEmpresaService _empresaService;
         public UsuarioCorporativoController(
             ICorporativoService corporativoServicio
             , IUsuarioService usuarioService
@@ -37,6 +39,8 @@ namespace SistemaERP.API.Controllers.SSO
             , ProcesoUsuarioCreacion UsuarioCreacionProceso
             , ICorporativoService CorporativoService
             , IErpService erpService
+            , IUsuarioEmpresaService usuarioEmpresaService
+            , IEmpresaService empresaService
             )
         {
             zvUserManager = userManager;
@@ -47,6 +51,8 @@ namespace SistemaERP.API.Controllers.SSO
             _UsuarioCreacionProceso = UsuarioCreacionProceso;
             _CorporativoService = CorporativoService;
             _ErpService = erpService;
+            _usuarioEmpresaService = usuarioEmpresaService;
+            _empresaService = empresaService;
         }
         /// <summary>
         /// Cuando un usuario entra al sistema llega a tener una tiene que tener acceso a un determinado número de empresas de un corporativo
@@ -87,7 +93,7 @@ namespace SistemaERP.API.Controllers.SSO
         [HttpGet("corporativosPertenecientes")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         //[Authorize(Policy = "RoleRFACIL")]
-        [Authorize(Policy = "Administrador")]
+        [Authorize(Policy = "AdministradorYAdminRoles")]
         public async Task<List<CorporativoDTO>> obtenerCorporativosPertenecientes()
         {
             var authen = HttpContext.User;
@@ -96,6 +102,7 @@ namespace SistemaERP.API.Controllers.SSO
             var usernameClaim = HttpContext.User.Claims.Where(z => z.Type == "username").ToList();
             var esActivoClaim = HttpContext.User.Claims.Where(z => z.Type == "activo").ToList();
             var esRfacilClaim = HttpContext.User.IsInRole("Administrador");
+            var esAdminRoles = HttpContext.User.IsInRole("AdministradorRoles");
             List<CorporativoDTO> corporativos = new List<CorporativoDTO>();
             if (esRfacilClaim)
             {
@@ -109,6 +116,21 @@ namespace SistemaERP.API.Controllers.SSO
                 if (corporativo.Id > 0)
                 {
                     corporativos.Add(corporativo);
+                }
+            }
+            if (esAdminRoles) {
+                var usuario = await _UsuarioService.ObtenXUsername(usernameClaim[0].Value);
+                var empresaXUsuario = await _usuarioEmpresaService.ObtenXIdUsuario(usuario.Id);
+                var listaCorporativo = new List<CorporativoDTO>();
+                corporativos = await _CorporativoService.ObtenTodos();
+
+                foreach (var emp in empresaXUsuario) {
+                    var empresa = await _empresaService.ObtenXId(emp.IdEmpresa);
+                    var corporativo = corporativos.FirstOrDefault(z => z.Id == empresa.IdCorporativo);
+                    var existeCorporativo = listaCorporativo.FirstOrDefault(z => z.Id == empresa.IdCorporativo);
+                    if (existeCorporativo == null) {
+                        listaCorporativo.Add(corporativo);
+                    }
                 }
             }
             var ERPCorporativos = await _ErpService.ObtenTodos();
