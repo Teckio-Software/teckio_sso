@@ -1945,7 +1945,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador"
+              "AdministradorYAdminRoles"
             ]
           }
         ]
@@ -3405,9 +3405,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3459,9 +3457,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3512,9 +3508,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3563,9 +3557,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3617,9 +3609,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3678,9 +3668,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3731,9 +3719,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3794,9 +3780,7 @@
         },
         "security": [
           {
-            "oauth2": [
-              "Administrador"
-            ]
+            "oauth2": [ ]
           }
         ]
       }
@@ -3809,6 +3793,67 @@
         "responses": {
           "200": {
             "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "Administrador"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/usuario/CrearAdministradorRoles": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioEstructuraCorporativoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioEstructuraCorporativoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioEstructuraCorporativoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RespuestaDTO"
+                }
+              }
+            }
           },
           "401": {
             "description": "Unauthorized"
@@ -3881,7 +3926,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador"
+              "AdministradorYAdminRoles"
             ]
           }
         ]
@@ -3951,7 +3996,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador"
+              "AdministradorYAdminRoles"
             ]
           }
         ]
@@ -4341,7 +4386,7 @@
         "security": [
           {
             "oauth2": [
-              "Administrador"
+              "AdministradorYAdminRoles"
             ]
           }
         ]
@@ -4727,7 +4772,9 @@
         },
         "security": [
           {
-            "oauth2": [ ]
+            "oauth2": [
+              "AdministradorYAdminRoles"
+            ]
           }
         ]
       }
@@ -4798,7 +4845,9 @@
         },
         "security": [
           {
-            "oauth2": [ ]
+            "oauth2": [
+              "AdministradorYAdminRoles"
+            ]
           }
         ]
       }
