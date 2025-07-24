@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\",
+  "WorkspaceRootPath": "C:\\ProyectosTeckio\\teckio_sso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\servicios\\usuarioproyectoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\servicios\\usuarioproyectoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\usuarioproyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\usuarioproyectocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\utilidades\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\utilidades\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\usuariocorporativocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\usuariocorporativocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\controllers\\usuarioempresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\proyectosteckio\\teckio_sso\\sso\\controllers\\usuarioempresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\usuarioempresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\carlosurielfloresg\u00F3m\\documents\\github\\teckio_sso\\sso\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +42,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Program.cs",
-              "RelativeDocumentMoniker": "SSO\\Program.cs",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Program.cs",
-              "RelativeToolTip": "SSO\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:58:15.452Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "SSO\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\WeatherForecast.cs",
-              "RelativeToolTip": "SSO\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:58:11.623Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\App.config",
-              "RelativeDocumentMoniker": "SSO\\App.config",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\App.config",
-              "RelativeToolTip": "SSO\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-16T19:58:00.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuarioEmpresaController.cs",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\UsuarioEmpresaController.cs",
-              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioEmpresaController.cs",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\UsuarioEmpresaController.cs",
-              "RelativeToolTip": "SSO\\Controllers\\UsuarioEmpresaController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAQwG4AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T18:17:38.338Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CuentaController.cs",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
-              "RelativeDocumentMoniker": "SSO\\Controllers\\CuentaController.cs",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
-              "RelativeToolTip": "SSO\\Controllers\\CuentaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAIAAAAAAAAAA==",
+              "Title": "UsuarioProyectoService.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Servicios\\UsuarioProyectoService.cs",
+              "RelativeDocumentMoniker": "SSO\\Servicios\\UsuarioProyectoService.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Servicios\\UsuarioProyectoService.cs",
+              "RelativeToolTip": "SSO\\Servicios\\UsuarioProyectoService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T22:01:52.618Z",
+              "WhenOpened": "2025-07-22T22:56:12.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "SSO\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAMsDAAAAAAAAAAAAwBcAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RolController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\RolController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\RolController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\RolController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\RolController.cs",
+              "ViewState": "AgIAAA8CAAAAAAAAAAAIwCQCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T18:31:15.545Z"
+              "WhenOpened": "2025-07-22T22:39:03.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioProyectoController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioProyectoController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioProyectoController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioProyectoController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\UsuarioProyectoController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwEAAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T22:32:31.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioEmpresaController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioEmpresaController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioEmpresaController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioEmpresaController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\UsuarioEmpresaController.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAYwOcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:19:12.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Policy.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Utilidades\\Policy.cs",
+              "RelativeDocumentMoniker": "SSO\\Utilidades\\Policy.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Utilidades\\Policy.cs",
+              "RelativeToolTip": "SSO\\Utilidades\\Policy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T22:58:31.771Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "SSO\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\CarlosUrielFloresG\u00F3m\\Documents\\GitHub\\teckio_sso\\SSO\\appsettings.Development.json",
-              "RelativeToolTip": "SSO\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-21T22:01:08.939Z"
+              "Title": "UsuarioCorporativoController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioCorporativoController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioCorporativoController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioCorporativoController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\UsuarioCorporativoController.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAIwF8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T22:45:12.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CuentaController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\CuentaController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\CuentaController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAADwv3QAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T22:15:57.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "SSO\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\ProyectosTeckio\\teckio_sso\\SSO\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "SSO\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAMoDAAAAAAAAAAAswN8DAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:21:11.293Z"
             }
           ]
         }

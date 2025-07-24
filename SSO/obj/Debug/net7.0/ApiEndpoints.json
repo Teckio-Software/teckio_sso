@@ -1372,6 +1372,32 @@
   },
   {
     "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "CrearAdministradorRoles",
+    "RelativePath": "api/usuario/CrearAdministradorRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "SistemaERP.DTO.UsuarioEstructuraCorporativoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SSO.DTO.RespuestaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
     "Method": "PrimerUsuarioCreacion",
     "RelativePath": "api/usuario/CrearPrimerUsuario",
     "HttpMethod": "POST",
