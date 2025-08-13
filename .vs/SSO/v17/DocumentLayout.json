@@ -38,44 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
-              "RelativeDocumentMoniker": "SSO\\Program.cs",
-              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
-              "RelativeToolTip": "SSO\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:58:15.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "SSO\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\WeatherForecast.cs",
-              "RelativeToolTip": "SSO\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:58:11.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\App.config",
-              "RelativeDocumentMoniker": "SSO\\App.config",
-              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\App.config",
-              "RelativeToolTip": "SSO\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-16T19:58:00.951Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -120,10 +84,46 @@
               "RelativeDocumentMoniker": "SSO\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\appsettings.Development.json",
               "RelativeToolTip": "SSO\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-21T22:01:08.939Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\App.config",
+              "RelativeDocumentMoniker": "SSO\\App.config",
+              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\App.config",
+              "RelativeToolTip": "SSO\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-16T19:58:00.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "SSO\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\WeatherForecast.cs",
+              "RelativeToolTip": "SSO\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T19:58:11.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
+              "RelativeDocumentMoniker": "SSO\\Program.cs",
+              "ToolTip": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
+              "RelativeToolTip": "SSO\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T19:58:15.452Z"
             }
           ]
         }
