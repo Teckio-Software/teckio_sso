@@ -3813,23 +3813,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\YairErnestoAlmanzaGu\\.nuget\\packages\\": {},
+    "C:\\Users\\yalmanza\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\SSO.csproj",
+      "projectUniqueName": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\SSO.csproj",
       "projectName": "SSO",
-      "projectPath": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\SSO.csproj",
-      "packagesPath": "C:\\Users\\YairErnestoAlmanzaGu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\YairErnestoAlmanzaGu\\OneDrive - GRUPO RFACIL EMPRESARIAL\\Escritorio\\Proyectos\\teckio_sso\\SSO\\obj\\",
+      "projectPath": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\SSO.csproj",
+      "packagesPath": "C:\\Users\\yalmanza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\YairErnestoAlmanzaGu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yalmanza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3934,7 +3934,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

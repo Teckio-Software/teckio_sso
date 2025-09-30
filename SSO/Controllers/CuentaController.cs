@@ -190,37 +190,52 @@ namespace SistemaERP.API.Controllers.SSO
         [HttpPost("login")]
         public async Task<ActionResult<RespuestaAutenticacionDTO>> zfLogin([FromBody] CredencialesUsuarioDTO zCredenciales)
         {
-            var zvResultadoUser = await zvUserManager.FindByNameAsync(zCredenciales.Email);
-            if (zvResultadoUser == null)
+            // Buscar usuario
+            var user = await zvUserManager.FindByNameAsync(zCredenciales.Email);
+            if (user == null)
             {
-                RespuestaAutenticacionDTO resp = new RespuestaAutenticacionDTO();
-                resp.FechaExpiracion = DateTime.Today;
-                resp.Token = "El usuario ingresado es incorrecto.";
-                return resp;
+                return new RespuestaAutenticacionDTO
+                {
+                    FechaExpiracion = DateTime.Today,
+                    Token = "El usuario ingresado es incorrecto."
+                };
             }
 
-            var zvResultado = await zvSignInManager.PasswordSignInAsync(zCredenciales.Email, zCredenciales.Password,
-                isPersistent: false, lockoutOnFailure: false);
-            if (zvResultado.Succeeded)
+            // Validar contraseña SIN emitir cookie
+            var pwdCheck = await zvSignInManager.CheckPasswordSignInAsync(
+                user,
+                zCredenciales.Password,
+                lockoutOnFailure: false
+            );
+
+            if (!pwdCheck.Succeeded)
             {
-                var usuario = await _UsuarioService.ObtenXUsername(zCredenciales.Email);
-                if (!usuario.Activo)
+                return new RespuestaAutenticacionDTO
                 {
-                    RespuestaAutenticacionDTO resp = new RespuestaAutenticacionDTO();
-                    resp.FechaExpiracion = DateTime.Today;
-                    resp.Token = "UsuarioNoActivo";
-                    return resp;
-                }
-                return await zfConstruirToken(zCredenciales);
+                    FechaExpiracion = DateTime.Today,
+                    Token = "La contraseña ingresada es incorrecta."
+                };
             }
-            else
+
+            // Verificar estado del usuario en tu dominio
+            var usuario = await _UsuarioService.ObtenXUsername(zCredenciales.Email);
+            if (!usuario.Activo)
             {
-                RespuestaAutenticacionDTO resp = new RespuestaAutenticacionDTO();
-                resp.FechaExpiracion = DateTime.Today;
-                resp.Token = "La contraseña ingresada es incorrecta.";
-                return resp;
+                return new RespuestaAutenticacionDTO
+                {
+                    FechaExpiracion = DateTime.Today,
+                    Token = "UsuarioNoActivo"
+                };
             }
+
+            // (Opcional) Si quedaron cookies antiguas de Identity en el navegador,
+            // puedes forzar su eliminación en la respuesta:
+            // Response.Cookies.Delete(".AspNetCore.Identity.Application");
+
+            // Emitir SOLO el JWT
+            return await zfConstruirToken(zCredenciales);
         }
+
         /// <summary>
         /// En el front se ocupa que se carguen las empresas una vez logueado pero el método de las empresas tiene que tener una petición antes
         /// Para eso se ocupa este endpoint, para validar que este logueado y que sea previo a la petición de empresas pertenecientes

@@ -1372,6 +1372,22 @@
   },
   {
     "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
+    "Method": "CrearAdministradorRoles",
+    "RelativePath": "api/usuario/CrearAdministradorRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaERP.API.Controllers.SSO.UsuarioController",
     "Method": "PrimerUsuarioCreacion",
     "RelativePath": "api/usuario/CrearPrimerUsuario",
     "HttpMethod": "POST",

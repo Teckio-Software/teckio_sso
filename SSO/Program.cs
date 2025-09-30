@@ -62,13 +62,24 @@ builder.Services.AddCors(zOptions =>
 
 
 });
-//Se usa la forma en la que usamos el logueo
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services
+    .AddIdentityCore<IdentityUser>(options =>
+    {
+        // (opcional) políticas de password/lockout
+        // options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<SSOContext>()
-    .AddDefaultTokenProviders();
-//Se agrega el como se mandan los permisos
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddSignInManager();               // Para usar CheckPasswordSignInAsync
+
+// Autenticación por defecto = JWT Bearer
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
 .AddJwtBearer(zOpciones =>
+{
     zOpciones.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = false,
@@ -76,9 +87,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration.GetSection("llavejwt").Value!)),
+            Encoding.UTF8.GetBytes(builder.Configuration["llavejwt"]!)),
         ClockSkew = TimeSpan.Zero
-    });
+    };
+});
 
 
 //Se agrega el mapeo de los controladores con la clase para filtrar errores

@@ -3826,6 +3826,31 @@
         ]
       }
     },
+    "/api/usuario/CrearAdministradorRoles": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "Administrador"
+            ]
+          }
+        ]
+      }
+    },
     "/api/usuario/AsignarRolesPorProyecto": {
       "post": {
         "tags": [
