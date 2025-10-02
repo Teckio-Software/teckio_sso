@@ -27,7 +27,9 @@ namespace Utilidades
                 opt => opt.MapFrom(origen => origen.Estatus == true ? 1 : 0));
             CreateMap<EmpresaDTO, Empresa>()
            .ForMember(destino => destino.IdCorporativoNavigation,
-                opt => opt.Ignore());
+                opt => opt.Ignore())
+           .ForMember(destino => destino.Logs, opt => opt.Ignore());
+
             #endregion
             #region Division
             CreateMap<Division, DivisionDTO>();
@@ -94,7 +96,9 @@ namespace Utilidades
 
             #region Usuario
             CreateMap<Usuario, UsuarioDTO>();
-            CreateMap<UsuarioDTO, Usuario>();
+            CreateMap<UsuarioDTO, Usuario>()
+           .ForMember(destino => destino.Logs, opt => opt.Ignore());
+
             #endregion
             #region UsuarioSeccion
             CreateMap<UsuarioSeccion, UsuarioSeccionDTO>();
@@ -249,6 +253,15 @@ namespace Utilidades
                 opt => opt.Ignore())
                 .ForMember(destino => destino.IdRolNavigation,
                 opt => opt.Ignore());
+            #endregion
+
+            #region Log
+
+            CreateMap<LogRegistro, LogDTO>();
+            CreateMap<LogDTO, LogRegistro>()
+                .ForMember(destino => destino.IdEmpresaNavigation, opt => opt.Ignore())
+                .ForMember(destino => destino.IdUsuarioNavigation, opt => opt.Ignore());
+
             #endregion
 
         }

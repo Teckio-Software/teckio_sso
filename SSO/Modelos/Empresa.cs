@@ -24,6 +24,8 @@ public partial class Empresa
 
     public string? GuidEmpresa { get; set; }
 
+    public virtual ICollection<LogRegistro> Logs { get; set; } = new List<LogRegistro>();
+
     public virtual ICollection<Division> Divisions { get; set; } = new List<Division>();
     public virtual ICollection<ParametrosEmpresaGastos> ParametrosEmpresaGastos { get; set; } = new List<ParametrosEmpresaGastos>();
 

@@ -47,4 +47,6 @@ public partial class Usuario
 
     public virtual ICollection<UsuariosUltimaSeccion> UsuariosUltimaSeccions { get; set; } = new List<UsuariosUltimaSeccion>();
     public virtual ICollection<RolProyectoEmpresaUsuario> RolProyectoEmpresaUsuarios { get; set; } = new List<RolProyectoEmpresaUsuario>();
+    public virtual ICollection<LogRegistro> Logs { get; set; } = new List<LogRegistro>();
+
 }

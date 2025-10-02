@@ -34,6 +34,7 @@ namespace Utilidades
             services.AddScoped<IUsuariosUltimaSeccionService, UsuariosUltimaSeccionServicio>();
             services.AddScoped(typeof(IParametrosEmpresaGastosService), typeof(ParametrosEmpresaGastosService));
             services.AddScoped<IErpService, ErpEmpresaService>();
+            services.AddScoped<ILogService, LogService>();
             //Menus
             services.AddScoped<ICatalogoMenuService, CatalogoMenuService>();
             services.AddScoped<ICatalogoSeccionService, CatalogoSeccionService>();

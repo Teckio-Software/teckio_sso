@@ -79,6 +79,7 @@ public partial class SSOContext : IdentityDbContext
     public virtual DbSet<Erp> Rps { get; set; }
     public virtual DbSet<Erpcorporativo> Rpempresas { get; set; }
     public virtual DbSet<RolProyectoEmpresaUsuario> RolProyectoEmpresaUsuarios { get; set; }
+    public virtual DbSet<LogRegistro> Logs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -198,10 +199,13 @@ public partial class SSOContext : IdentityDbContext
 
         modelBuilder.Entity<Empresa>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC070519C6AF");
+            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC073D0B836F");
 
             entity.ToTable("Empresa");
 
+            entity.Property(e => e.CodigoPostal)
+                .HasMaxLength(10)
+                .IsUnicode(false);
             entity.Property(e => e.FechaRegistro)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -212,9 +216,6 @@ public partial class SSOContext : IdentityDbContext
             entity.Property(e => e.Rfc)
                 .HasMaxLength(13)
                 .IsUnicode(false);
-            entity.Property(e => e.CodigoPostal)
-                .HasMaxLength(10)
-                .IsUnicode(false);
             entity.Property(e => e.Sociedad)
                 .HasMaxLength(10)
                 .IsUnicode(false);
@@ -222,7 +223,7 @@ public partial class SSOContext : IdentityDbContext
             entity.HasOne(d => d.IdCorporativoNavigation).WithMany(p => p.Empresas)
                 .HasForeignKey(d => d.IdCorporativo)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Empresa__IdCorpo__07F6335A");
+                .HasConstraintName("FK__Empresa__IdCorpo__0E6E26BF");
         });
 
         modelBuilder.Entity<MenuEmpresa>(entity =>
@@ -329,7 +330,7 @@ public partial class SSOContext : IdentityDbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC073A81B327");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC07A3BEFAF9");
 
             entity.ToTable("Usuario");
 
@@ -690,6 +691,27 @@ public partial class SSOContext : IdentityDbContext
                 .HasForeignKey(d => d.IdErp)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ERPCorpor__IdErp__4A8310C6");
+        });
+        modelBuilder.Entity<LogRegistro>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Logs__3214EC0715F0B5E9");
+
+            entity.Property(e => e.DbContext).HasMaxLength(200);
+            entity.Property(e => e.Fecha)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Metodo).HasMaxLength(150);
+            entity.Property(e => e.Nivel).HasMaxLength(100);
+
+            entity.HasOne(d => d.IdEmpresaNavigation).WithMany(p => p.Logs)
+                .HasForeignKey(d => d.IdEmpresa)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("Fk_Log_Empresa");
+
+            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Logs)
+                .HasForeignKey(d => d.IdUsuario)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("Fk_Log_Usuario");
         });
 
         base.OnModelCreating(modelBuilder);
