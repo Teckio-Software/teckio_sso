@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\yalmanza\\onedrive - grupo teckio\\escritorio\\proyectos\\teckio_sso\\sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\yalmanza\\onedrive - grupo teckio\\escritorio\\proyectos\\teckio_sso\\sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\yalmanza\\onedrive - grupo teckio\\escritorio\\proyectos\\teckio_sso\\sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CuentaController.cs",
               "DocumentMoniker": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
               "RelativeDocumentMoniker": "SSO\\Controllers\\CuentaController.cs",
               "ToolTip": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Controllers\\CuentaController.cs",
               "RelativeToolTip": "SSO\\Controllers\\CuentaController.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAAANsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAAAN4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-30T15:46:40.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
               "RelativeDocumentMoniker": "SSO\\Program.cs",
               "ToolTip": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
               "RelativeToolTip": "SSO\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAFcAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-30T15:45:39.719Z",
               "EditorCaption": ""

@@ -1,0 +1,91 @@
+name: Development SSO
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout (git clone con GITHUB_TOKEN y rama del run)
+        run: |
+          echo "ref_name=${{ github.ref_name }}"
+          git clone --depth=1 --branch "${{ github.ref_name }}" \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" repo
+          cd repo
+          echo "GIT SHA: $(git rev-parse --short HEAD)"
+
+      - name: Asegurar docker context por defecto
+        run: docker context use default
+
+      - name: Definir IMAGE (owner en minúsculas)
+        run: |
+          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          echo "IMAGE=ghcr.io/${OWNER_LC}/teckio_sso" >> $GITHUB_ENV
+          echo "Usando imagen: $IMAGE"
+
+      - name: Detectar Dockerfile y context automáticamente
+        working-directory: repo
+        run: |
+          set -euo pipefail
+          echo "Buscando Dockerfile..."
+          DF=$(git ls-files | awk -F/ '$NF=="Dockerfile"{print $0}' | head -n1 || true)
+          if [ -z "${DF:-}" ]; then
+            DF=$(find . -maxdepth 4 -type f -name 'Dockerfile' | head -n1 || true)
+          fi
+          if [ -z "${DF:-}" ]; then
+            echo "No se encontró un archivo llamado 'Dockerfile' en el repo."
+            ls -la
+            exit 1
+          fi
+          DIR=$(dirname "$DF")
+          CTX=$([ "$DIR" = "." ] && echo "." || echo "$DIR")
+          echo "DOCKERFILE_PATH=$DF" >> $GITHUB_ENV
+          echo "BUILD_CONTEXT=$CTX" >> $GITHUB_ENV
+          echo "Detectado Dockerfile en: $DF"
+          echo "Build context: $CTX"
+
+      - name: Login a GHCR (con GITHUB_TOKEN)
+        working-directory: repo
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: Build & Push
+        working-directory: repo
+        env:
+          TAG_DEV: dev
+          TAG_SHA: sha-${{ github.sha }}
+        run: |
+          echo "Usando DOCKERFILE_PATH=$DOCKERFILE_PATH, BUILD_CONTEXT=$BUILD_CONTEXT"
+          docker build -f "$DOCKERFILE_PATH" -t "$IMAGE:$TAG_DEV" -t "$IMAGE:$TAG_SHA" "$BUILD_CONTEXT"
+          docker push "$IMAGE:$TAG_DEV"
+          docker push "$IMAGE:$TAG_SHA"
+
+      - name: Escribir key.pem (heredoc, multilínea, sin CRLF)
+        run: |
+          umask 077
+          cat > key.pem <<'EOF'
+          ${{ secrets.DO_SSH_KEY }}
+          EOF
+          sed -i 's/\r$//' key.pem
+          chmod 600 key.pem
+          echo "Key at: $(pwd)/key.pem"
+          test -f key.pem || (echo "Falta key.pem" && exit 1)
+
+      - name: Test SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem "${{ secrets.DROPLET_USER }}"@"${{ secrets.DROPLET_HOST }}" 'echo OK && whoami && hostname'
+
+      - name: Deploy al droplet por SSH
+        working-directory: repo
+        env:
+          GHCR_USER: ${{ secrets.GHCR_USER }}
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ../key.pem "${{ secrets.DROPLET_USER }}"@"${{ secrets.DROPLET_HOST }}" \
+            'export GHCR_USER="'$GHCR_USER'"; export GHCR_TOKEN="'$GHCR_TOKEN'"; bash /srv/teckio/deploy-dev.sh'
