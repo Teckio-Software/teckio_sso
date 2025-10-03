@@ -28,7 +28,11 @@ builder.Services.AddSingleton(provIder =>
     {
         config.AddProfile(new AutoMapperProfile());
     }).CreateMapper());
-var origenesPermitidos = builder.Configuration.GetValue<string>("OrigenesPermitidos")!.Split(",");
+var origenesPermitidos = builder.Configuration.GetSection("OrigenesPermitidos").Get<string[]>()
+                         ?? Array.Empty<string>();
+
+if (origenesPermitidos.Length == 0)
+    throw new InvalidOperationException("Falta 'OrigenesPermitidos' en configuración.");
 //Se agrega el CORS
 builder.Services.AddCors(zOptions =>
 {
