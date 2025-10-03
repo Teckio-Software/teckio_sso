@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|c:\\users\\yalmanza\\onedrive - grupo teckio\\escritorio\\proyectos\\teckio_sso\\sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC4CD1C-32CC-412E-849A-7AD6616B8032}|SSO\\SSO.csproj|solutionrelative:sso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
+              "RelativeDocumentMoniker": "SSO\\Program.cs",
+              "ToolTip": "C:\\Users\\yalmanza\\OneDrive - Grupo TECKIO\\Escritorio\\Proyectos\\teckio_sso\\SSO\\Program.cs",
+              "RelativeToolTip": "SSO\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T17:13:18.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
