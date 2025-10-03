@@ -30,3 +30,5 @@ SSO/obj/project.assets.json
 SSO/obj/project.nuget.cache
 SSO/obj/SSO.csproj.nuget.dgspec.json
 SSO/obj/SSO.csproj.nuget.g.props
+SSO/appsettings.Development.json
+SSO/appsettings.json
